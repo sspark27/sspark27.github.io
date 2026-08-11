@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오픈놀이터 · OpenPlayground — 열린 코드, 열린 놀이, 열린 사람들</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="description"
+    content="오픈놀이터(OpenPlayground)는 누구나 코드를 보고, 바로 즐기고, 함께 만드는 오픈 소스·오픈 게임·오픈 커뮤니티 브랜드입니다. 브라우저에서 바로 플레이하는 오픈 게임을 만나보세요.">
+  <meta name="keywords" content="오픈놀이터, OpenPlayground, 오픈소스, 오픈게임, 오픈커뮤니티, 인디게임, 브라우저게임, 게임잼">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="오픈놀이터 · OpenPlayground">
+  <meta property="og:description" content="열린 코드, 열린 놀이, 열린 사람들. 브라우저에서 바로 즐기는 오픈 게임 놀이터.">
+  <meta property="og:url" content="https://sspark27.github.io/openplayground/">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#home" class="logo-wrapper">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="34" height="34">
+            <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#opgGrad)"/>
+            <defs>
+              <linearGradient id="opgGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3ee0c0"/><stop offset="1" stop-color="#ff7a59"/>
+              </linearGradient>
+            </defs>
+            <!-- open door / play -->
+            <path d="M18 14 L30 24 L18 34 Z" fill="#0b0f1a"/>
+          </svg>
+        </span>
+        <span class="logo-text">오픈<b>놀이터</b></span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#discover" class="nav-link">둘러보기</a></li>
+        <li><a href="#triad" class="nav-link">우리는</a></li>
+        <li><a href="#build" class="nav-link">만들기</a></li>
+        <li><a href="#community" class="nav-link">모임</a></li>
+        <li><a href="#mascot" class="nav-link">마스코트</a></li>
+      </ul>
+      <button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section id="home" class="hero-section">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge"><span class="dot"></span> Play it. Fork it. Share it.</div>
+      <h1 class="hero-title">
+        열린 코드, 열린 놀이,<br><span class="text-gradient">열린 사람들</span>
+      </h1>
+      <p class="hero-desc">
+        오픈놀이터는 누구나 <b>코드를 보고</b>, <b>바로 즐기고</b>, <b>함께 만드는</b>
+        오픈 소스 · 오픈 게임 · 오픈 커뮤니티 브랜드예요. 설치는 필요 없어요 — 한 판 하러 오세요!
+      </p>
+      <div class="hero-actions">
+        <a href="#discover" class="btn btn-primary">🎮 게임 둘러보기</a>
+        <a href="#triad" class="btn btn-ghost">우리가 하는 일</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b id="stat-games">7</b><span>오픈 게임</span></div>
+        <div class="hstat"><b>100%</b><span>오픈 소스</span></div>
+        <div class="hstat"><b>0원</b><span>자유 이용</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Triad (brand 3 pillars) ===== -->
+  <section id="triad" class="section triad-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Ethos</span>
+        <h2 class="section-title">세 가지가 하나로 열려 있어요</h2>
+        <p class="section-desc">오픈 소스 · 오픈 게임 · 오픈 커뮤니티. 공통 분모는 하나, <b>열림(Open)</b>.</p>
+      </div>
+      <div class="triad-grid">
+        <div class="triad-card reveal">
+          <div class="triad-icon">⚡</div>
+          <h3>Open Source</h3>
+          <p>투명하고 자유로운 코드. 함께 읽고, 고치고, 나눠요.</p>
+        </div>
+        <div class="triad-card reveal reveal-delay-1">
+          <div class="triad-icon">🎮</div>
+          <h3>Open Games</h3>
+          <p>즉시 플레이, 누구나 창작. 놀이는 경계가 없어요.</p>
+        </div>
+        <div class="triad-card reveal reveal-delay-2">
+          <div class="triad-icon">🤝</div>
+          <h3>Open Community</h3>
+          <p>포용적인 광장. 메이커와 플레이어가 함께 자라요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Discover (Games) ===== -->
+  <section id="discover" class="section games-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Discover</span>
+        <h2 class="section-title">지금 바로 플레이</h2>
+        <p class="section-desc">브라우저에서 곧바로 즐기는 오픈 게임. 필터를 골라 마음에 드는 한 판을 찾아보세요.</p>
+      </div>
+      <div class="filter-bar" id="filter-bar">
+        <button class="chip active" data-filter="all">전체</button>
+        <button class="chip" data-filter="arcade">아케이드</button>
+        <button class="chip" data-filter="action">액션</button>
+        <button class="chip" data-filter="survival">서바이벌</button>
+        <button class="chip" data-filter="roguelike">로그라이크</button>
+        <button class="chip" data-filter="casual">캐주얼</button>
+        <button class="chip" data-filter="sports">스포츠</button>
+      </div>
+      <div class="games-grid" id="games-grid"><!-- injected by main.js --></div>
+    </div>
+  </section>
+
+  <!-- ===== Build (Open source) ===== -->
+  <section id="build" class="section build-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Build</span>
+        <h2 class="section-title">함께 만들어요</h2>
+        <p class="section-desc">코드도 에셋도 튜토리얼도 모두 열려 있어요. 당신의 한 판을 세상에 내놓으세요.</p>
+      </div>
+      <div class="build-grid">
+        <a class="build-card reveal" href="https://github.com/sspark27" target="_blank" rel="noopener">
+          <div class="build-icon">📦</div>
+          <h3>오픈 프로젝트</h3>
+          <p>모든 게임 소스를 포크하고 직접 확장해 보세요.</p>
+          <span class="build-go">GitHub로 →</span>
+        </a>
+        <div class="build-card reveal reveal-delay-1">
+          <div class="build-icon">🎨</div>
+          <h3>무료 에셋</h3>
+          <p>픽셀 아트·사운드·타일맵을 자유롭게 가져다 쓰세요.</p>
+          <span class="build-go">준비 중</span>
+        </div>
+        <div class="build-card reveal reveal-delay-2">
+          <div class="build-icon">📚</div>
+          <h3>튜토리얼</h3>
+          <p>브라우저 게임 만드는 법을 단계별로 정리해 둘게요.</p>
+          <span class="build-go">준비 중</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Community ===== -->
+  <section id="community" class="section community-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Community</span>
+        <h2 class="section-title">모두가 환영되는 광장</h2>
+        <p class="section-desc">개발일지, 메이커 인터뷰, 그리고 정기적인 <b>오픈 게임잼</b>. 같이 놀아요.</p>
+      </div>
+      <div class="community-grid">
+        <div class="community-card reveal">
+          <div class="community-emoji">💬</div>
+          <h3>포럼 & 개발일지</h3>
+          <p>만드는 과정을 기록하고 피드백을 주고받아요.</p>
+        </div>
+        <div class="community-card reveal reveal-delay-1">
+          <div class="community-emoji">🏆</div>
+          <h3>정기 오픈 게임잼</h3>
+          <p>정해진 테마로 주말 동안 함께 게임을 만들고 공유해요.</p>
+        </div>
+        <div class="community-card reveal reveal-delay-2">
+          <div class="community-emoji">✨</div>
+          <h3>메이커 스토리</h3>
+          <p>작은 스튜디오와 개인 개발자의 이야기를 전해요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Mascot ===== -->
+  <section id="mascot" class="section mascot-section">
+    <div class="container mascot-wrap">
+      <div class="mascot-art reveal">
+        <!-- Pixel cat mascot -->
+        <svg viewBox="0 0 64 64" width="180" height="180" shape-rendering="crispEdges" class="mascot-cat">
+          <rect x="14" y="10" width="8" height="8" fill="#3ee0c0"/>
+          <rect x="42" y="10" width="8" height="8" fill="#3ee0c0"/>
+          <rect x="10" y="14" width="6" height="10" fill="#3ee0c0"/>
+          <rect x="48" y="14" width="6" height="10" fill="#3ee0c0"/>
+          <rect x="14" y="18" width="36" height="26" fill="#3ee0c0"/>
+          <rect x="12" y="20" width="40" height="22" fill="#3ee0c0"/>
+          <rect x="20" y="14" width="24" height="6" fill="#3ee0c0"/>
+          <rect x="18" y="44" width="28" height="10" fill="#2bbfa3"/>
+          <rect x="22" y="26" width="6" height="6" fill="#0b0f1a"/>
+          <rect x="36" y="26" width="6" height="6" fill="#0b0f1a"/>
+          <rect x="24" y="28" width="2" height="2" fill="#ff7a59"/>
+          <rect x="38" y="28" width="2" height="2" fill="#ff7a59"/>
+          <rect x="28" y="34" width="8" height="3" fill="#0b0f1a"/>
+          <rect x="26" y="34" width="2" height="2" fill="#ff7a59"/>
+          <rect x="36" y="34" width="2" height="2" fill="#ff7a59"/>
+          <rect x="30" y="37" width="4" height="2" fill="#ff7a59"/>
+        </svg>
+      </div>
+      <div class="mascot-text reveal reveal-delay-1">
+        <span class="section-badge">Mascot</span>
+        <h2 class="section-title">만두, 우리 놀이터 고양이</h2>
+        <p class="section-desc">코드를 보다가 딴짓하고 싶을 때 나타나는 픽셀 고양이예요. "함께 노는 개발자 친구" 만두가 오픈놀이터를 안내할게요. (=^･ω･^=)</p>
+        <p class="mascot-quote">"버그도 같이 잡고, 한 판도 같이 해요!" — 만두 🐱</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container footer-layout">
+      <div class="footer-brand">
+        <span class="logo-mark small" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="28" height="28">
+            <rect x="6" y="6" width="36" height="36" rx="10" fill="url(#opgGrad2)"/>
+            <defs><linearGradient id="opgGrad2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#3ee0c0"/><stop offset="1" stop-color="#ff7a59"/>
+            </linearGradient></defs>
+            <path d="M18 14 L30 24 L18 34 Z" fill="#0b0f1a"/>
+          </svg>
+        </span>
+        <span class="footer-logo-text">오픈<b>놀이터</b> · OpenPlayground</span>
+      </div>
+      <div class="footer-copy">© 2026 OpenPlayground. 모두에게 열려 있어요. · <a href="https://sspark27.github.io/" target="_blank" rel="noopener">smilecookie hub</a></div>
+      <ul class="social-links">
+        <li><a href="https://github.com/sspark27" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">⌨</a></li>
+        <li><a href="#" class="social-link" aria-label="Discord">👾</a></li>
+        <li><a href="#" class="social-link" aria-label="X">𝕏</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ===== Play Modal ===== -->
+  <div class="modal" id="play-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <h3 id="modal-title">게임</h3>
+        <button class="modal-close" id="modal-close" aria-label="닫기">✕</button>
+      </div>
+      <iframe id="modal-frame" src="about:blank" title="게임 플레이"></iframe>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
